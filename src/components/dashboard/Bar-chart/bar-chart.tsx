@@ -17,7 +17,7 @@ import {
 } from "recharts";
 import { SensorData } from "../dashboard";
 
-export function MultipleBarChart({ data }: { data: SensorData[] }) {
+export function MultipleBarChart({ data }: Readonly<{ data: SensorData[] }>) {
   const filteredData = data.slice(-10);
   const chartData = filteredData.map((item) => ({
     timestamp: new Date(item.timestamp).toLocaleTimeString(),

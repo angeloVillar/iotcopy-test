@@ -16,7 +16,7 @@ interface SensorCardProps {
   data: Measurement;
 }
 
-export function SensorCard({ data }: SensorCardProps) {
+export function SensorCard({ data }: Readonly<SensorCardProps>) {
   return (
     <Card className="w-full p-6 shadow-lg rounded-xl border border-gray-200 bg-gradient-to-b from-white to-gray-50">
       <CardHeader>

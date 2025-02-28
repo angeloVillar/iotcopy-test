@@ -20,7 +20,7 @@ interface LinearChartProps {
   data: SensorData[];
 }
 
-export function LinearChart({ data }: LinearChartProps) {
+export function LinearChart({ data }: Readonly<LinearChartProps>) {
   return (
     <Card className="h-[400px]">
       <CardHeader>

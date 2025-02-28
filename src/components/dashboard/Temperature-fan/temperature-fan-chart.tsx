@@ -2,7 +2,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { LineChart, Line, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from "recharts";
 import { SensorData } from "../dashboard";
 
-export function CombinedTemperatureFanChart({sensorData}: {sensorData: SensorData[]}) {
+export function CombinedTemperatureFanChart({sensorData}: Readonly<{ sensorData: SensorData[] }>) {
   const chartData = sensorData.map(data => ({
     timestamp: new Date(data.timestamp).toLocaleTimeString(),
     temperature: data.temperature,
